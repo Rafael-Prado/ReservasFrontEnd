@@ -12,7 +12,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path="/" exact Component={Login} />
-            <Route path="/home" exact Component={Home} />
+            <Route path="/home" Component={Home} />
           </Switch>
         </Layout>
       </BrowserRouter>
