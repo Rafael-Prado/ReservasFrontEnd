@@ -1,61 +1,44 @@
 import React, { Component } from 'react'
-import { Button, FormControl, FormGroup } from 'react-bootstrap'
-import "./login.css"
+import Logo from '../../assets/logo.svg'
+import './login.css'
 
 export default class Login extends Component {
-    constructor (props){
-        super(props);
-        this.state = {
-            usuario: "",
-            password: ""
-        }
-    }
+    state = {
+        username: "",
+        password: "",
+        error: ""
+    };
 
-    validadeForm(){
-        return this.state.usuario.length > 0 && this.password.length > 0
-    }
-    handlerChange = event => {
-        this.setState({
-            [event.target.id]: event.target.value
-        })
-    }
+    handleSignUp = e => {
+      e.preventDefault();
+      this.props.history.push("/Home");
 
-    handleSubmit = event => {
-        event.preventdefault()
-    }
-
-    render (){
-        return(
-        <div className="Login">
-            <form onSubmit={this.handleSubmit}>
-                <FormGroup controlId="usuario" bsSize="large">
-                              
-                    <FormControl
-                        autoFocus
-                        type="usuario"
-                        value={this.state.usuario}
-                        onChange={this.handlerChange}
-                    />
-                </FormGroup>
-                <FormGroup controlId="password" bsSize="large">
-                                   
-                    <FormControl
-                        autoFocus
-                        type="password"
-                        value={this.state.password}
-                        onChange={this.handlerChange}
-                    />
-                </FormGroup>
-
-                <Button block
-                bsSize="large"
-                disabled={!this.validadeForm()}
+      alert("Eu vou te registrar");
+    };   
+      render() {
+        return (
+          <div className="Login">
+            <form className="FormLogin" onSubmit={this.handleSignUp}>
+            <img src={Logo} alt=" logo" />
+            {this.state.error && <p>{this.state.error}</p>}
+                <input className = "inputForm form-control"
+                  type="text"
+                  placeholder="Nome de usuário"
+                  onChange={e => this.setState({ username: e.target.value })}
+                />
+              <input className = "inputForm form-control"
+                type="Senha"
+                placeholder="Senha"
+                onChange={e => this.setState({ password: e.target.value })}
+              />
+              <button className="BtnLogin"
+                block
                 type="submit"
-                >
-                    Login
-                </Button>
+              >
+                Login
+              </button>
             </form>
-        </div>
-        )
+          </div>
+        );
+      }
     }
-}

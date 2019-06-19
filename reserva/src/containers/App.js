@@ -7,17 +7,18 @@ import Login from '../components/Login/login'
 
 class App extends Component {
   render() {
-    return (
+    return (     
       <BrowserRouter>
         <Layout>
           <Switch>
-            <Route path="/" exact Component={Login} />
-            <Route path="/home" Component={Home} />
+            <Route exact path="/"  component={ Login }  />
+            <Route path="/home" component={Home}  />
+            <Route path="/Reservas" component={() => <h1>Reservas</h1> }/>
           </Switch>
         </Layout>
       </BrowserRouter>
-    );
+    )
   }
 }
 
-export default App;
+export default App
