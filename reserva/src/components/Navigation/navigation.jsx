@@ -7,7 +7,7 @@ import { Col } from 'react-bootstrap'
 const navigation = (props) => {
     return (
     <Col md={12}>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-info">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@ const navigation = (props) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link  className='nav-link'to='/Resevas'>Lista Reservados</Link>
+                        <Link  className='nav-link'to='/ListaReserva'>Lista Reservados</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to='/NovaReserva'>Nova Reserva</Link>
