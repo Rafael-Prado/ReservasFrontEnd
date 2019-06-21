@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Row, Carousel,Alert } from 'react-bootstrap'
+import { Row, Carousel,Alert, Col } from 'react-bootstrap'
 import Navigation from '../Navigation/navigation';
 import Card from '../Auxiliar/card'
 import Footer from '../Auxiliar/Footer'
@@ -13,6 +13,7 @@ class Home extends Component {
 
    render(){ 
         return(
+          <Col md ={12}>
             <div>
                 <Row>
                     <Navigation/>
@@ -68,6 +69,7 @@ class Home extends Component {
               <Footer/>
               
             </div>
+          </Col>
             
         )
     }

@@ -29,8 +29,8 @@ const postDataSuccess = (response) => {
 }
  
 export const postData = (url, obj, props) => {
-    return (dispatch) => {
-        axios.post(url, obj)
+   return (dispatch) => {
+        axios.post(url,obj)
         .then(response => {
             dispatch(postDataSuccess(response));
         })
@@ -75,5 +75,13 @@ export const deleteData = (url, props) => {
         .catch(error => {
             //TODO: handle the error when implemented
         })
+    }
+}
+
+export const closeSuccessModal = (props, url) =>{
+    return {
+        type: actionTypes.CLOSE_SUCCESS_MODAL,
+        props: props,
+        url: url
     }
 }

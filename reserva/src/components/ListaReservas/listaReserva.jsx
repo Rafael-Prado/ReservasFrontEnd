@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import * as repositoryActions from '../../store/actions/repositoryActions'
-import {Row, Table} from 'react-bootstrap'
+import {Row, Table, Col} from 'react-bootstrap'
 import Navigation from '../Navigation/navigation'
-import Reservas from '../../reservas/reservas'
+import Reservas from '../reservas/reservas'
 
 class ListaReserva extends Component {   
     
@@ -25,27 +25,29 @@ class ListaReserva extends Component {
         }
 
         return(
-            <div>
-                <Row>
-                <Navigation/>
-                </Row>
-                <br/>
-                <Table responsive  striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Filial</th>
-                            <th>Sala</th>
-                            <th>Dia</th>
-                            <th>Hora Início/Hora Fim</th>
-                            <th>Responsavel</th>
-                            <th>Açoes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Listreservas}
-                    </tbody>
-                </Table>               
-            </div>
+            <Col md={12}>
+                <div>
+                    <Row>
+                    <Navigation/>
+                    </Row>
+                    <br/>
+                    <Table responsive  striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>Filial</th>
+                                <th>Sala</th>
+                                <th>Dia</th>
+                                <th>Hora Início/Hora Fim</th>
+                                <th>Responsavel</th>
+                                <th>Açoes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Listreservas}
+                        </tbody>
+                    </Table>               
+                </div>
+            </Col>
         )
     }
 }

@@ -22,10 +22,10 @@ const navigation = (props) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link  className='nav-link'to='/ListaReserva'>Lista Reservados</Link>
+                        <Link  className='nav-link'to='/listareserva'>Lista Reservados</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to='/NovaReserva'>Nova Reserva</Link>
+                        <Link className="nav-link" to='/novareserva'>Nova Reserva</Link>
                     </li>
                 </ul>
                 
