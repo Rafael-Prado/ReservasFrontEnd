@@ -51,18 +51,14 @@ class Home extends Component {
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-              </Carousel>              
-              <br/>
+              </Carousel>         
               <Alert variant="danger">
                 Temos promoção essa semana alugue 2 horas ganhe 1 hora,
-                <Alert.Link href="#">Vem com a Gete</Alert.Link>. Somente essa semana!!!
+                <Alert.Link href="#">VEM COM A GENTE</Alert.Link>. Somente essa semana!!!
                 </Alert>
-                <br/>
               <Row>
                 <Card/>              
               </Row>
-              <br/>
-              <br/>
               <br/>
               <br/>
 

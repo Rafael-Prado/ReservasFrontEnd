@@ -33,7 +33,9 @@
         .BtnLogin {
           color: #fff;
           font-size: 16px;
-          background: #fc6963;
+          background:linear-gradient(to right top,
+          #ff0000, #ff0057, #ff0097, #df48cd, #a570f1, #8779f9, 
+          #6280fd, #2686ff, #327eff, #4074ff, #506afe, #5f5ffb);
           height: 56px;
           border: 0;
           border-radius: 5px;

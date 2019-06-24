@@ -86,7 +86,7 @@ class ReservaDetails extends Component {
                             <strong>Hora Fim:</strong>
                         </Col>
                         <Col md={2}>
-                            <Moment format="HH:mm">{reserva.HoraFim}</Moment>
+                            <Moment format="HH:mm">{reserva.horaFim}</Moment>
                         </Col>
                     </Row>
                     <Row>

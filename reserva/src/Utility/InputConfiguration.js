@@ -3,12 +3,12 @@ import moment from 'moment'
 export const returnInputConfiguration = () => {
     return {
         filial: {
-            element: 'input', type: 'text', value: '', 
+            element: 'input', type: 'text', value: 'Banana2', 
             validation: { required: true }, valid: false, touched: false,
             errorMessage: '', label: 'Filial:'
         },
         sala: {
-            element: 'input', type: 'text', value: '', 
+            element: 'input', type: 'text', value: 'Reunião1', 
             validation: { required: true, maxLength: 60 }, valid: false, touched: false,
             errorMessage: '', label: 'Sala:'
         },

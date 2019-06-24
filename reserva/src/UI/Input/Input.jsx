@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FormGroup, Col, FormControl, FormLabel } from 'react-bootstrap';
+import { FormGroup, Col, FormControl, FormLabel, Row } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Input.css';
@@ -16,7 +16,7 @@ const input = (props) => {
 switch (props.elementType) {
     case 'input':
         inputField = (
-            <FormGroup controlId={props.id}>
+            <FormGroup controlId={props.id}>                
                 <Col componentClass={FormLabel} sm={2}>
                     {props.label}
                 </Col>
@@ -25,27 +25,10 @@ switch (props.elementType) {
                 </Col>
                 <Col>
                     <em>{errorMessage}</em>
-                </Col>
+                </Col>               
             </FormGroup>
         )
         break;
-    // case 'datePicker':
-    //     inputField = (
-    //         <FormGroup controlId={props.id}>
-    //             <Col componentClass={FormLabel} sm={2}>
-    //                 {props.label}
-    //             </Col>
-    //             <Col sm={6}>
-    //                 <DatePicker selected={props.value} dateFormat="MM/DD/YYYY" readOnly
-    //                     onChange={props.changed} className='datePickerControl' 
-    //                     showYearDropdown dropdownMode="select"/>
-    //             </Col>
-    //             <Col>
-    //                 <em>{errorMessage}</em>
-    //             </Col>
-    //         </FormGroup>
-    //     )
-    //     break;
     default: inputField = null;
 }
     

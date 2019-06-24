@@ -35,8 +35,8 @@ class CreateReserva extends Component {
     
         const reservaToCreate = {
             ReservaId: 0,
-            UsuarioId: 0,
-            SalaId: this.state.reservaForm.sala.value,
+            UsuarioId: 1,
+            SalaId: 1,
             DataInicio: this.state.reservaForm.dataInicio.value,
             DataFim: this.state.reservaForm.dataFim.value,
             HoraInicio: this.state.reservaForm.horaInicio.value,
@@ -62,7 +62,7 @@ class CreateReserva extends Component {
                 <Navigation/>
                 </Row>
                 <br/>
-                <Jumbotron>
+                <div>
                     
                     <Form horizontal onSubmit={this.createReserva}>
                         {
@@ -99,7 +99,7 @@ class CreateReserva extends Component {
                             modalHeaderText={'Erro message'} 
                             modalBodyText={this.props.errorMessage}
                             okButtonText={'OK'} closeModal={() => this.props.onCloseErrorModal()} />
-                </Jumbotron>
+                </div>
             </Col>
          )
     }

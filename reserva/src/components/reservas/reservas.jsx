@@ -17,6 +17,7 @@ const redirectToUpdateOwner = (id, history) => {
 }
  
 const rediterctToDeleteOwner = (id, history) => {
+    
     history.push('/deleteReserva/' + id);
 }
 

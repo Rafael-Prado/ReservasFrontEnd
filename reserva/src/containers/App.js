@@ -8,6 +8,8 @@ import ReservaDetails from '../components/ReservaDetails/reservaDetails'
 import InternalServer from '../components/ErrorPages/InternalServer/internalServer'
 import asyncComponent from '../Hoc/AsyncComponent'
 import CreateReserva from '../components/reservas/CreateReserva/CreateReserva'
+import DeleteReserva from '../components/reservas/DeleteReserva/DeleteReserva'	
+import UpdateReserva from '../components/reservas/UpdateReserva/UpdateReserva'
 
 const AsyncReservaList = asyncComponent(() => {
   return import('../components/ListaReservas/listaReserva');
@@ -24,6 +26,8 @@ class App extends Component {
             <Route path="/listareserva" component={AsyncReservaList}/>            
             <Route path="/novareserva" component={CreateReserva}/>
             <Route path="/reservaDetails/:id" component={ReservaDetails} />
+            <Route path="/deleteReserva/:id" component={DeleteReserva} />
+            <Route path="/updateReserva/:id" component={UpdateReserva} />
             <Route path="/500" component={InternalServer} />
           </Switch>
         </Layout>

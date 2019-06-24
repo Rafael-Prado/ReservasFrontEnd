@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Logo from '../../assets/logo.png'
+import {Form, FormGroup, Button} from 'react-bootstrap'
 import './login.css'
 
 export default class Login extends Component {
@@ -11,33 +12,35 @@ export default class Login extends Component {
 
     handleSignUp = e => {
       e.preventDefault();
+
+
       this.props.history.push("/Home");
 
-      alert("Eu vou te registrar");
+      alert("Autenticado!!!");
     };   
       render() {
         return (
           <div className="Login">
-            <form className="FormLogin" onSubmit={this.handleSignUp}>
+            <Form className="FormLogin" horizontal onSubmit={this.handleSignUp}>
             <img src={Logo} alt=" logo" />
             {this.state.error && <p>{this.state.error}</p>}
-                <input className = "inputForm form-control"
-                  type="text"
-                  placeholder="Nome de usuário"
-                  onChange={e => this.setState({ username: e.target.value })}
-                />
-              <input className = "inputForm form-control"
-                type="Senha"
+               <Form.Control size="lg" type="text" placeholder="Nome de usuário"
+                  onChange={e => this.setState({ username: e.target.value }) }/>
+               <br/>
+               <Form.Control size="lg" type="password" 
+                type="passwor"
                 placeholder="Senha"
                 onChange={e => this.setState({ password: e.target.value })}
               />
-              <button className="BtnLogin"
+              <br/>
+              <Button  className="BtnLogin"
+                size="lg"
                 block
                 type="submit"
               >
                 Login
-              </button>
-            </form>
+              </Button>
+              </Form>
           </div>
         );
       }
